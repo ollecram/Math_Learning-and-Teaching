@@ -65,38 +65,51 @@ Let now proceed:
 	                                        &= y + x \qed
 \end{align*}
 \item Proof that $P(n) \implies P(n+1)\;$:
-This amounts to prove the equality
+This amounts to prove the identity
 $$ (x + y)^{n+1} = (x + y) \sum_{i=0}^{n} \binom{n}{i} x^i y^{n-i} = \sum_{i=0}^{(n+1)} \binom{n+1}{i} x^i y^{n-i+1}\,,$$
-likely exploiting the equality proved in exercise 1 above, namely
+likely exploiting the identity proved in exercise 1 above, namely
 $$\binom{n}{i-1} + \binom{n}{i} = \binom{n+1}{i}\,.$$
  
 The proof starts here :
 \begin{align*}
 P &=  (x + y)^{n+1} = (x + y) \cdot (x + y)^n\\
   &=  x \cdot (x + y)^n + y \cdot (y + x)^n \\
-  &=  \binom{n}{0} x^1 y^{n+0} + \binom{n}{1} x^2 y^{n-1} + \cdots + \binom{n}{n-1} x^{n} y^{1}  + \binom{n}{n} x^{n+1} y^{0}\\
-  &+  \binom{n}{0} y^1 x^{n+0} + \binom{n}{1} y^2 x^{n-1} + \cdots + \binom{n}{n-1} y^{n} x^{1}  + \binom{n}{n} y^{n+1} x^{0}\
+  &=  \binom{n}{0} x^1 y^{n} + \binom{n}{1} x^2 y^{n-1} + \cdots + \binom{n}{n-1} x^{n} y^{1}  + \binom{n}{n} x^{n+1} y^{0}\\
+  &+  \binom{n}{0} y^1 x^{n} + \binom{n}{1} y^2 x^{n-1} + \cdots + \binom{n}{n-1} y^{n} x^{1}  + \binom{n}{n} y^{n+1} x^{0}
 \end{align*}
  
+We now make use of the trivial identity 
+$$\binom{n}{n-k} = \binom{n}{k}\,,$$ 
+and rewrite the above expression for $(x + y)^{n+1}$ in a form that helps identifying the \tbi{two} binomial coefficients which multiply the \tbi{same term} $x^j y^k$ in the above expansion:
+\begin{align*}
+P &=  (x + y)^{n+1} = (x + y) \cdot (x + y)^n  = x (x + y)^n + x (x + y)^n\\
+  &=  \binom{n}{0} x^1 y^{n} + \binom{n}{1} x^2 y^{n-1} + \cdots + \binom{n}{1} x^{n} y^{1}  + \binom{n}{0} x^{n+1} y^{0}\\
+  &+  \binom{n}{0} y^1 x^{n} + \binom{n}{1} y^2 x^{n-1} + \cdots + \binom{n}{1} y^{n} x^{1}  + \binom{n}{0} y^{n+1} x^{0}\,.\\
+  &=  x^{n+1} + y^{n+1}\\
+  &+  \binom{n}{0} x^1 y^{n} + \binom{n}{1} x^2 y^{n-1} + \cdots + \binom{n}{2} x^{n-1} y^{2} + \binom{n}{1} x^{n} y^{1}\\
+  &+  \binom{n}{0} y^1 x^{n} + \binom{n}{1} y^2 x^{n-1} + \cdots + \binom{n}{2} y^{n-1} x^{2} + \binom{n}{1} y^{n} x^{1}
+\end{align*}
 
-We can now reduce the above \tbi{sum of two sums} to a \tbi{single sum} whose generic term is $B(j,k) \cdot (x^j y^k)$, and 
-$B(j,k)$ (with  $j+k = n+1$) stands for the sum of the two \tit{binomial coefficients} which multiply the term $(x^j y^k)$ in the first and in the second sum, respectively. We note that $j+k = n+1$, and that 
-$$B(j,k) = \binom{n}{j} + \binom{n}{k}$$ 
-
+After a little re-arrangement:  
+\begin{align*}
+P &=  x^{n+1} + y^{n+1}\\
+  &+  \binom{n}{0} x^1 y^{n} + \binom{n}{1} x^2 y^{n-1} + \cdots + \binom{n}{2} x^{n-1} y^{2} + \binom{n}{1} x^{n} y^{1} \\
+  &+  \binom{n}{0} y^1 x^{n} + \binom{n}{1} y^2 x^{n-1} + \cdots + \binom{n}{2} y^{n-1} x^{2} + \binom{n}{1} y^{n} x^{1}\\
+  &=  x^{n+1} + y^{n+1} \\
+  &+  \left[ \binom{n}{0} +  \binom{n}{1} \right] \cdot (x^{1} y^{n} + y^1 x^n)\\
+  &+  \left[ \binom{n}{1} + \binom{n}{2} \right] \cdot (x^{2} y^{n-1} + y^2 x^{n-1})\\
+  &+  \cdots \text{hence, using the result of Exercise 1:}\\
+P &=  x^{n+1} + y^{n+1} + \binom{n+1}{1} (x^{1} y^{n} + y^1 x^n) + \binom{n+1}{2} (x^{2} y^{n-1} + y^2 x^{n-1}) + \cdots \\
+  &=  \sum_{i=0}^{n+1} \binom{n+1}{i} x^i y^{n+1-i} \qed
+\end{align*}
 
 \end{enumerate}
-
-
-
-
-
-
 
 
 \subsubsection{Ex 1.2.1 (3)}\label{sec:Ex_1.2.1.3}
 % Ex 3 statement
 Prove the following statements for all positive integers:
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item $1 + 3 + 5 + \cdots + (2n - 1) = n^2$
 \item $1^2 + 2^2 + \cdots + n^2 = n (n+1)(2n + 1)/6$
 \item $1^3 + 2^3 + \cdots + n^3 = [n (n+1)/2]^2$
@@ -106,10 +119,11 @@ Prove the following statements for all positive integers:
 % Ex 3 solution
 %
 \paragraph{Solution:}{
-
-\begin{align*}
-\end{align*}
-
+\begin{enumerate}[(a)]
+\item $\sum_{i=1}^{n} (2n-1) = 2 \sum_{i=1}^{n} i - \sum_{i=1}^{n} 1 = 2 \frac{n(n+1)}{2} - n = n(n+1) - n = n^2\,.$ 
+\item The statement is true for $n = 1\,: 1^2 = 1 \cdot 2 \cdot 3/6 = 6/6$. By induction, it is enough to prove that \tbi{if} the sum of the squares $i^2$ of the first $n$ integers equals $n (n+1)(2n + 1)/6$ \tbi{then} by adding $(n+1)^2$ to this sum one obtains $m (m+1)(2m + 1)/6$, with $m=n+1$. Indeed both expressions reduce to $2 n^3 + 9 n^2 + 13 n + 6$, hence the identity is proved.
+\item The statement is true for $n = 1\,: 1^3 = [1\cdot(1+1)/2)]^2 = 1$. By induction, it is enough to prove that \tbi{if} the sum of the cubes $i^3$ of the first $n$ integers equals $[n (n+1)/2]^2$ \tbi{then} by adding $(n+1)^3$ to this sum one obtains $[m (m+1)/2]^2$, with $m=n+1$. Indeed both expressions reduce to $n^4+ 6 n^3 + 13 n^2 + 12 n + 4$, hence the identity is proved.
+\end{enumerate}
 }
 
 \subsubsection{Ex 1.2.1 (4)}\label{sec:Ex_1.2.1.4}
