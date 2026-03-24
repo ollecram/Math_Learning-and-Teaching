@@ -5,10 +5,92 @@
 \counterwithin{equation}{section}	% Equation will be will be 0.1 0.2 0.3   ... 
 
 \section{Sets}\label{sec:0.1}
-\subsection*{Exercises}\label{sec:0.1_Exercises}
+%\subsection*{Exercises}\label{sec:0.1_Exercises}
+No Exercise for section 0.1 
 %\newpage		% Forcing a page break
+
 \section{Mappings}\label{sec:0.2}	
 \subsection*{Exercises}\label{sec:0.2_Exercises}
+%
+\subsubsection{Ex 0.2 (1)}\label{sec:Ex_0.2.1}
+% Ex 1 Statement
+Let $S, T, T'$ be sets. Show that
+$$S \cap (T \cup T') = (S \cap T) \cup (S \cap T')$$
+If $T_1,\ldots,T_n$ are sets, show that
+$$S \cap (T_1 \cup \cdots \cup T_n) = (S \cap T_1) \cup \cdots \cup (S \cap T_n)\,.$$
+
+% Ex 1 Solution
+\paragraph{Solution:}{
+\begin{align*}
+x \in \left[ S \cap (T \cup T') \right] &\equiv  (x \in S) \land [x \in (T \cup T')]\\
+                                        &\equiv  (x \in S) \land [(x \in T) \lor (x \in T')] \\
+                                        &\equiv  [x \in S \land (x \in T)] \lor [x \in S \land (x \in T')]\\
+                                        &\equiv  [x \in (S \cap T)] \lor [x \in (S \cap T')]\\
+                                        &\equiv  x \in [(S \cap T) \cup (S \cap T')]\,. \qed
+\end{align*}
+The case involving the union of more than two $T$'s can be proved along the same line.
+}	% Solution paragraph end!
+
+\subsubsection{Ex 0.2 (2)}\label{sec:Ex_0.2.2}
+% Ex 2 Statement
+Show that the equalities of Exercise 1 remain true if the intersection and union signs $\cap$ and $\cup$ are interchanged.
+
+% Ex 2 Solution
+\paragraph{Solution:}{
+The \tit{interchange} of \tit{intersection} and \tit{union} signs ($\cap$ and $\cup$) in the equality \tit{statement}
+just causes the \tit{interchange} of the logical $\land$ (AND) and logical $\lor$ (OR) symbols:
+\begin{align*}
+x \in \left[ S \cup (T \cap T') \right] &\equiv  (x \in S) \lor [x \in (T \cap T')]\\
+                                        &\equiv  (x \in S) \lor [(x \in T) \land (x \in T')] \\
+                                        &\equiv  [x \in S \lor (x \in T)] \land [x \in S \lor (x \in T')]\\
+                                        &\equiv  [x \in (S \cup T)] \land [x \in (S \cup T')]\\
+                                        &\equiv  x \in [(S \cup T) \cap (S \cup T')]\,. \qed
+\end{align*}
+}	% Solution paragraph end!
+
+\subsubsection{Ex 0.2 (3)}\label{sec:Ex_0.2.3}
+% Ex 3 Statement
+Let $A, B$ be subsets of a set $S$. Denote by $\cC_S(A)$ the complement of $A$ in $S$. Show that the complement of the intersection is the union of the complements, i.e.:
+$$\cC_S(A \cap B) = \cC_S(A) \cup \cC_S(B) \text{   and   } \cC_S(A \cup B) = \cC_S(A) \cap \cC_S(B)\,.$$ 
+
+% Ex 3 Solution
+\paragraph{Solution:}{
+
+\begin{align*}
+x \in \left[ \cC_S(A \cap B) \right] &\equiv  [x \in \cC_S(A)] \lor [x \in \cC_S(B)] \\ 
+                                     &\equiv  x \in [\cC_S(A) \cup \cC_S(B)]\,. \qed
+\end{align*}
+
+}	% Solution paragraph end!
+
+\subsubsection{Ex 0.2 (4)}\label{sec:Ex_0.2.4}
+% Ex 4 Statement
+If $X, Y, Z$ are sets, show that
+\begin{align*}
+(X \cup Y) \times Z &= (X \times Z) \cup (Y \times Z)\,,\\ 
+(X \cap Y) \times Z &= (X \times Z) \cap (Y \times Z)\,.\\ 
+\end{align*}
+
+% Ex 4 Solution
+\paragraph{Solution:}{
+Both $(X \cup Y) \times Z$ and $(X \times Z) \cup (Y \times Z)$ define the same set, namely the set of all $(k,z)$ pairs of which $k$is member of $X, Y$ or both sets, i.e: $k \in (X \cup Y)$, while $z \in Z$. \\
+
+Both $(X \cap Y) \times Z$ and $(X \times Z) \cap (Y \times Z)$ define the same set, namely the set of all $(k,z)$ pairs of which $k$ is a member of both sets $X$ and $Y$, i.e: $k \in (X \cap Y)$, while and $z \in Z$. $Z$ itself may have a nonempty intersection with $X$, $Y$ or both, but that is irrelevant, as it only determines the range of possible values of the second component of the $(k, z)$ pair.
+}	% Solution paragraph end!
+
+
+
+\subsubsection{Ex 0.2 (5)}\label{sec:Ex_0.2.5}
+% Ex 5 Statement
+\subsubsection{Ex 0.2 (6)}\label{sec:Ex_0.2.6}
+% Ex 6 Statement
+\subsubsection{Ex 0.2 (7)}\label{sec:Ex_0.2.7}
+% Ex 7 Statement
+\newpage		% Forcing a page break
+%
+
+
+
 %\newpage		% Forcing a page break
 \section{Natural Numbers and Induction}\label{sec:0.3}	
 \subsection*{Exercises}\label{sec:0.3_Exercises}
