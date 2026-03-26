@@ -83,12 +83,12 @@ Both $(X \cap Y) \times Z$ and $(X \times Z) \cap (Y \times Z)$ define the same 
 Let $f : S \rightarrow T$ be a mapping, and let $Y, Z$ be subsets of $T$. Show that 
 \begin{align*}
 f^{-1}(Y \cap Z) &= f^{-1}(Y) \cap f^{-1}(Z)\,,\\ 
-f^{-1}(X \cup Y) &= f^{-1}(Y) \cup f^{-1}(Z)\,.\\ 
+f^{-1}(Y \cup Z) &= f^{-1}(Y) \cup f^{-1}(Z)\,.\\ 
 \end{align*}
 
 % Ex 5 Solution
 \paragraph{Solution:}{
-Assuming $f : S \rightarrow T$ to be \tit{surjective} is not a serious restriction\footnote{Otherwise take $T' = f(S)$, i.e. assume $T$ to be the codomain of $f$.}, yet it avoids some annoying details in the proof. Henceforth, assume that for any $y \in T$ there is $x \in S$ such that $f(x) = y$. We start by proving an \tbi{intermediate result}, namely that $f$ and $f^{-1}$ \tit{map partitions into partitions}
+Assuming $f : S \rightarrow T$ to be \tit{surjective} is not a serious restriction\footnote{Otherwise take $T' = f(S)$, i.e. assume $T$ to be the codomain of $f$.}, yet it avoids some annoying details in the proof. Henceforth, assume that for any $y \in T$ there is $x \in S$ such that $f(x) = y$. We start by proving an \tbi{intermediate result}, namely that $f^{-1}$ \tit{maps partitions into partitions}\footnote{In general, this is not true of $f$.}.
 
 Let $\{T_1, \ldots , T_n\}$ be \tit{subsets} of $T$ implementing an arbitrary\\ \tbi{partition} of the latter, so that  
 $$ \bigcup\limits_{i=1}^{n} T_i = T\, \text{ \tbi{and}, for any } (i,j)\, \text{ with } i \neq j\,, T_i \cap T_j = \emptyset\,.$$
@@ -101,7 +101,17 @@ by showing that assuming the contrary, (that $\exists x \in (S_i \cap S_j)\,$), 
 $\exists x \in (S_i \cap S_j) \implies \exists f(x) \in (T_i \cap T_j)\:$ but $T_i$ and $T_j$ are members of a partition of $T$, 
 hence $(T_i \cap T_j) = \emptyset \qed$.\\
 
-Now, if $Y, Z$ are any subsets of $T$, their \tbi{union} $Y \cup Z$ can be expressed by considering all \tit{disjoint} subsets which belong to a \tit{partition} of $T$ \tbi{and} have a nonempty intersection with either $Y$ and $Z$.
+Now, if $Y, Z$ are any two subsets of $T$, let consider their \tbi{union} $Y \cup Z$, their \tbi{intersection} $Y \cap Z$ and the set differences $Y\setminus Z$ and $Z\setminus Y$. Clearly, their \tbi{union} $Y \cup Z$ can be considered as the union of three \tit{nonintersecting} sets: 
+$$ Y \cup Z = (Y\setminus Z) \cup (Y \cap Z) \cup (Z\setminus Y)\,.$$
+By applying to $ Y\cup Z$ the above result that $f^{-1}$ maps nonintersecting sets to nonintersecting sets
+\begin{align*}
+f^{-1}(Y \cup Z) &= f^{-1}(Y\setminus Z) \cup f^{-1}(Y \cap Z) \cup f^{-1}(Z\setminus Y)\,,\\
+                 &= f^{-1}(Y) \cup f^{-1}(Z)\,\\
+f^{-1}(Y \cap Z) &= f^{-1}(Y\setminus Z) \cup f^{-1}(Z\setminus Y)\,,\\
+                 &= f^{-1}(Y) \cap f^{-1}(Z)\,. \qed
+\end{align*}
+
+
 }	% Solution paragraph end!
 
 
