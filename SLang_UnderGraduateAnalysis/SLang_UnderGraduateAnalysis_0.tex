@@ -73,15 +73,38 @@ If $X, Y, Z$ are sets, show that
 
 % Ex 4 Solution
 \paragraph{Solution:}{
-Both $(X \cup Y) \times Z$ and $(X \times Z) \cup (Y \times Z)$ define the same set, namely the set of all $(k,z)$ pairs of which $k$is member of $X, Y$ or both sets, i.e: $k \in (X \cup Y)$, while $z \in Z$. \\
+Both $(X \cup Y) \times Z$ and $(X \times Z) \cup (Y \times Z)$ define the same set, namely the set of all $(k,z)$ pairs of which $k$ is member of $X$ \tit{OR}, \tit{inclusively}, it is member of $Y$. That is: $k \in (X \cup Y)$, while $z \in Z$. \\
 
-Both $(X \cap Y) \times Z$ and $(X \times Z) \cap (Y \times Z)$ define the same set, namely the set of all $(k,z)$ pairs of which $k$ is a member of both sets $X$ and $Y$, i.e: $k \in (X \cap Y)$, while and $z \in Z$. $Z$ itself may have a nonempty intersection with $X$, $Y$ or both, but that is irrelevant, as it only determines the range of possible values of the second component of the $(k, z)$ pair.
+Both $(X \cap Y) \times Z$ and $(X \times Z) \cap (Y \times Z)$ define the same set, namely the set of all $(k,z)$ pairs of which $k$ is a member of both sets $X$ and $Y$, i.e: $k \in (X \cap Y)$, while $z \in Z$. $Z$ itself may have a nonempty intersection with $X$, $Y$ or both, but that is irrelevant, as it only determines the range of possible values of the second component of the $(k, z)$ pair.
 }	% Solution paragraph end!
-
-
 
 \subsubsection{Ex 0.2 (5)}\label{sec:Ex_0.2.5}
 % Ex 5 Statement
+Let $f : S \rightarrow T$ be a mapping, and let $Y, Z$ be subsets of $T$. Show that 
+\begin{align*}
+f^{-1}(Y \cap Z) &= f^{-1}(Y) \cap f^{-1}(Z)\,,\\ 
+f^{-1}(X \cup Y) &= f^{-1}(Y) \cup f^{-1}(Z)\,.\\ 
+\end{align*}
+
+% Ex 5 Solution
+\paragraph{Solution:}{
+Assuming $f : S \rightarrow T$ to be \tit{surjective} is not a serious restriction\footnote{Otherwise take $T' = f(S)$, i.e. assume $T$ to be the codomain of $f$.}, yet it avoids some annoying details in the proof. Henceforth, assume that for any $y \in T$ there is $x \in S$ such that $f(x) = y$. We start by proving an \tbi{intermediate result}, namely that $f$ and $f^{-1}$ \tit{map partitions into partitions}
+
+Let $\{T_1, \ldots , T_n\}$ be \tit{subsets} of $T$ implementing an arbitrary\\ \tbi{partition} of the latter, so that  
+$$ \bigcup\limits_{i=1}^{n} T_i = T\, \text{ \tbi{and}, for any } (i,j)\, \text{ with } i \neq j\,, T_i \cap T_j = \emptyset\,.$$
+We claim that $\{S_1, \ldots , S_n\}$, where   $S_i = f^{-1}(T_i)$, is a \tbi{partition} of $S$:
+$$ \bigcup\limits_{i=1}^{n} S_i = S\, \text{ \tbi{and}, for any } (i,j)\, \text{ with } i \neq j\,, S_i \cap S_j = \emptyset\,.$$
+\tbf{Proof}:\\
+Recap of our definitions: $S_i = f^{-1}(T_i)\;$ \text{ and } $T_i = f(S_i)\,.$\\
+\tbi{Step 1:} We prove that $\:\forall i, \text{ and } j \neq i \;  S_i \cap S_j =  f^{-1}(T_i) \cap f^{-1}(T_j) = \emptyset\,,$\\ 
+by showing that assuming the contrary, (that $\exists x \in (S_i \cap S_j)\,$), leads to a contradiction. Indeed:\\
+$\exists x \in (S_i \cap S_j) \implies \exists f(x) \in (T_i \cap T_j)\:$ but $T_i$ and $T_j$ are members of a partition of $T$, 
+hence $(T_i \cap T_j) = \emptyset \qed$.\\
+
+Now, if $Y, Z$ are any subsets of $T$, their \tbi{union} $Y \cup Z$ can be expressed by considering all \tit{disjoint} subsets which belong to a \tit{partition} of $T$ \tbi{and} have a nonempty intersection with either $Y$ and $Z$.
+}	% Solution paragraph end!
+
+
 \subsubsection{Ex 0.2 (6)}\label{sec:Ex_0.2.6}
 % Ex 6 Statement
 \subsubsection{Ex 0.2 (7)}\label{sec:Ex_0.2.7}
