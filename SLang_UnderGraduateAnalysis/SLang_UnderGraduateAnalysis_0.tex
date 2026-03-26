@@ -97,17 +97,21 @@ $$ \bigcup\limits_{i=1}^{n} S_i = S\, \text{ \tbi{and}, for any } (i,j)\, \text{
 Recap of our definitions: $S_i = f^{-1}(T_i)\;$ \text{ and } $T_i = f(S_i)\,.$\\
 \tbi{Step 1:} We prove that $\:\forall i, \text{ and } j \neq i \;  S_i \cap S_j =  f^{-1}(T_i) \cap f^{-1}(T_j) = \emptyset\,,$\\ 
 by showing that assuming the contrary, (that $\exists x \in (S_i \cap S_j)\,$), leads to a contradiction. Indeed:\\
-$\exists x \in (S_i \cap S_j) \implies \exists f(x) \in (T_i \cap T_j)\:$ but $T_i$ and $T_j$ are members of a partition of $T$, 
-hence $(T_i \cap T_j) = \emptyset \qed$.\\
+$\exists x \in (S_i \cap S_j) \implies \exists f(x) \in (T_i \cap T_j)\:$ but $T_i$ and $T_j$ are \tit{members} of \tbi{nonintersecting subsets} of $T$, hence $(T_i \cap T_j) = \emptyset \qed$.\\
 
-Now, if $Y, Z$ are any two subsets of $T$, let consider their \tbi{union} $Y \cup Z$, their \tbi{intersection} $Y \cap Z$ and the set differences $Y\setminus Z$ and $Z\setminus Y$. Clearly, their \tbi{union} $Y \cup Z$ can be considered as the union of three \tit{nonintersecting} sets: 
+Now, if $Y, Z$ are any two subsets of $T$, let consider their \tbi{union} $Y \cup Z$, their \tbi{intersection} $Y \cap Z$ and the set differences $Y\setminus Z$ and $Z\setminus Y$. Clearly, $Y \cup Z$ can be considered as the union of \tbi{three} \tit{nonintersecting} sets: 
 $$ Y \cup Z = (Y\setminus Z) \cup (Y \cap Z) \cup (Z\setminus Y)\,.$$
-By applying to $ Y\cup Z$ the above result that $f^{-1}$ maps nonintersecting sets to nonintersecting sets
+By applying  to $ Y\cup Z$ the above result (that $f^{-1}$ maps nonintersecting sets to nonintersecting sets), we obtain\footnote{It should be evident, but we have not actually proved, that the last (third) equality follows from the previous one.}
 \begin{align*}
-f^{-1}(Y \cup Z) &= f^{-1}(Y\setminus Z) \cup f^{-1}(Y \cap Z) \cup f^{-1}(Z\setminus Y)\,,\\
-                 &= f^{-1}(Y) \cup f^{-1}(Z)\,\\
-f^{-1}(Y \cap Z) &= f^{-1}(Y\setminus Z) \cup f^{-1}(Z\setminus Y)\,,\\
-                 &= f^{-1}(Y) \cap f^{-1}(Z)\,. \qed
+f^{-1}(Y \cup Z) &= f^{-1}\left[ (Y\setminus Z) \cup (Y \cap Z) \cup (Z\setminus Y) \right] \,,\\
+                 &= f^{-1}(Y\setminus Z) \cup f^{-1}(Y \cap Z) \cup f^{-1}(Z \setminus Y)\,, \\
+                 &= f^{-1}(Y) \cup f^{-1}(Z)\,. \qed\\
+\end{align*}
+Let now turn to $ Y\cap Z$.  For all $x \in (Y \cap Z)$  ($Y, Z$ subsets of $T$)
+\begin{align*}
+x \in Y &\implies f^{-1}(x) \in f^{-1}(Y)\,, \text{while}\\
+x \in Z &\implies f^{-1}(x) \in f^{-1}(Z)\,, \text{hence}\\
+x \in (Y\cap Z) &\implies f^{-1}(x) \in (f^{-1}(Y) \cap f^{-1}(Z))\,. \qed 
 \end{align*}
 
 
