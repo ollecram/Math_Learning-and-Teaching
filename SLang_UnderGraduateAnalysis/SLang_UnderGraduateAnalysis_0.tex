@@ -85,8 +85,27 @@ Let $f : S \rightarrow T$ be a mapping, and let $Y, Z$ be subsets of $T$. Show t
 f^{-1}(Y \cap Z) &= f^{-1}(Y) \cap f^{-1}(Z)\,,\\ 
 f^{-1}(Y \cup Z) &= f^{-1}(Y) \cup f^{-1}(Z)\,.\\ 
 \end{align*}
-% Ex 5 Solution
-\paragraph{Solution:}{
+% Ex 5 Solution A
+
+\paragraph{Solution (A):}{
+Here we exhibit a \tbi{proof by contradiction}.\\
+
+\tbf{Part I} : proving that $f^{-1}(Y \cap Z) = f^{-1}(Y) \cap f^{-1}(Z)\,.$\\
+\tbi{If} the assertion is \tbi{false}, then $\exists x$ such that
+\begin{enumerate}[i)]
+\item $(x \in Y) \land (x \in Z)$ \tbi{and}
+\item $\left[ \left( f^{-1}(x) \notin f^{-1}(Y) \right) \lor \left( f^{-1}(x) \notin f^{-1}(Z) \right) \right]\,.$
+\end{enumerate}
+But the assumption about $x$ made at \tbf{i)} ($\land$ : \quotes{\tbi{and}}) \tit{contradicts} the statement at \tbf{ii)}
+(where $\lor$ : \quotes{\tbi{or}}). In words: \quotes{If $x$ is a member of both $Y$ and $Z$} its inverse image $f^{-1}(x)$ must be a member of the inverse images of both sets: $Y$ and $Z$, Therefore, an $x$ satisfying both \tbf{i)} and \tbf{ii)} \tbi{cannot exist}.\\ 
+
+\tbf{Part II} : proving that $f^{-1}(Y \cup Z) = f^{-1}(Y) \cup f^{-1}(Z)\,.$\\
+
+}	% Solution 5A paragraph end!
+
+\paragraph{Solution (B):}{
+Solution A of this exercise (0.2.5) provides a proof by contradiction. Here we exploit a general fact ($f^{-1}$ \tit{mapping partitions into partitions}) to provide a \tbi{direct proof}, although a rather laborious one.\\
+
 Assuming $f : S \rightarrow T$ to be \tit{surjective} is not a serious restriction\footnote{Otherwise take $T' = f(S)$, i.e. assume $T$ to be the codomain of $f$.}, yet it avoids some annoying details in the proof. Henceforth, assume that for any $y \in T$ there is $x \in S$ such that $f(x) = y$. We start by proving an \tbi{intermediate result}, namely that $f^{-1}$ \tit{maps partitions into partitions}\footnote{Or, more generally: that it \tit{maps nonintersecting sets to nonintersecting sets}.}.
 
 Let $\{T_1, \ldots , T_n\}$ be \tit{subsets} of $T$ implementing an arbitrary\\ \tbi{partition} of the latter, so that  
@@ -114,14 +133,34 @@ x \in Z &\implies f^{-1}(x) \in f^{-1}(Z)\,, \text{hence}\\
 x \in (Y\cap Z) &\implies f^{-1}(x) \in (f^{-1}(Y) \cap f^{-1}(Z))\,. \qed 
 \end{align*}
 
-
-}	% Solution paragraph end!
+}	% Solution 5B paragraph end!
 
 
 \subsubsection{Ex 0.2 (6)}\label{sec:Ex_0.2.6}
 % Ex 6 Statement
+Let $S, T, U$ be sets, and let $f : S \rightarrow T$ and $g : T \rightarrow T$ be mappings.
+\begin{enumerate}[(a)]
+\item If $g, f$ are injective, show that $g \circ f$ is injective. 
+\item If $f, g$ are surjective, show that $g \circ f$ is surjective.
+\end{enumerate}
+% Ex 6 Solution
+\paragraph{Solution:}{
+}
+
 \subsubsection{Ex 0.2 (7)}\label{sec:Ex_0.2.7}
 % Ex 7 Statement
+Let $S, T$ be sets, and $f : S \rightarrow T$ a mapping.
+Show that $f$ is bijective if and only if $f$ has an inverse mapping.
+
+% Ex 7 Solution
+\paragraph{Solution:}{
+}
+
+
+
+
+
+
 \newpage		% Forcing a page break
 %
 
