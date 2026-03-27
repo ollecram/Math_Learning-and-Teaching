@@ -87,7 +87,7 @@ f^{-1}(Y \cup Z) &= f^{-1}(Y) \cup f^{-1}(Z)\,.\\
 \end{align*}
 % Ex 5 Solution A
 
-\paragraph{Solution (A):}{
+\paragraph{Solution:}{
 Here we exhibit a \tbi{proof by contradiction}.\\
 
 \tbf{Part I} : proving that $f^{-1}(Y \cap Z) = f^{-1}(Y) \cap f^{-1}(Z)\,.$\\
@@ -97,14 +97,20 @@ Here we exhibit a \tbi{proof by contradiction}.\\
 \item $\left[ \left( f^{-1}(x) \notin f^{-1}(Y) \right) \lor \left( f^{-1}(x) \notin f^{-1}(Z) \right) \right]\,.$
 \end{enumerate}
 But the assumption about $x$ made at \tbf{i)} ($\land$ : \quotes{\tbi{and}}) \tit{contradicts} the statement at \tbf{ii)}
-(where $\lor$ : \quotes{\tbi{or}}). In words: \quotes{If $x$ is a member of both $Y$ and $Z$} its inverse image $f^{-1}(x)$ must be a member of the inverse images of both sets: $Y$ and $Z$, Therefore, an $x$ satisfying both \tbf{i)} and \tbf{ii)} \tbi{cannot exist}.\\ 
+(where $\lor$ : \quotes{\tbi{or}}). In words: \quotes{If $x$ is a member of both $Y$ and $Z$} its inverse image $f^{-1}(x)$ must be a member of the inverse images of both sets: $Y$ and $Z$. Therefore, an $x$ satisfying both \tbf{i)} and \tbf{ii)} \tbi{cannot exist}.\\ 
 
 \tbf{Part II} : proving that $f^{-1}(Y \cup Z) = f^{-1}(Y) \cup f^{-1}(Z)\,.$\\
-
+\tbi{If} the assertion is \tbi{false}, then $\exists x$ such that
+\begin{enumerate}[i)]
+\item $(x \in Y) \lor (x \in Z)$ \tbi{and}
+\item $\left[ \left( f^{-1}(x) \notin f^{-1}(Y) \right) \land \left( f^{-1}(x) \notin f^{-1}(Z) \right) \right]\,.$
+\end{enumerate}
+But the assumption about $x$ made at \tbf{i)} ($\lor$ : \quotes{\tbi{or}}) \tit{contradicts} the statement at \tbf{ii)}
+(where $\land$ : \quotes{\tbi{and}}). In words: \quotes{If $x$ is a member of $Y$, $Z$ \tit{or both}} its inverse image $f^{-1}(x)$ must be a member of the inverse images of \tit{at least one} among sets: $Y$ and $Z$. Therefore, an $x$ satisfying both \tbf{i)} and \tbf{ii)} \tbi{cannot exist}.\\ 
 }	% Solution 5A paragraph end!
 
-\paragraph{Solution (B):}{
-Solution A of this exercise (0.2.5) provides a proof by contradiction. Here we exploit a general fact ($f^{-1}$ \tit{mapping partitions into partitions}) to provide a \tbi{direct proof}, although a rather laborious one.\\
+\paragraph{Alternative solutions:}{
+The above paragraphs provide proofs by contradiction. Here we propose an alternative (more \quotes{\tit{constructive}}) type of proofs.\\
 
 Assuming $f : S \rightarrow T$ to be \tit{surjective} is not a serious restriction\footnote{Otherwise take $T' = f(S)$, i.e. assume $T$ to be the codomain of $f$.}, yet it avoids some annoying details in the proof. Henceforth, assume that for any $y \in T$ there is $x \in S$ such that $f(x) = y$. We start by proving an \tbi{intermediate result}, namely that $f^{-1}$ \tit{maps partitions into partitions}\footnote{Or, more generally: that it \tit{maps nonintersecting sets to nonintersecting sets}.}.
 
