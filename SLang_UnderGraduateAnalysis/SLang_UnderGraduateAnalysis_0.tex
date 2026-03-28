@@ -144,15 +144,35 @@ x \in (Y\cap Z) &\implies f^{-1}(x) \in (f^{-1}(Y) \cap f^{-1}(Z))\,. \qed
 
 \subsubsection{Ex 0.2 (6)}\label{sec:Ex_0.2.6}
 % Ex 6 Statement
-Let $S, T, U$ be sets, and let $f : S \rightarrow T$ and $g : T \rightarrow T$ be mappings.
+Let $S, T, U$ be sets, and let $f : S \rightarrow T$ and $g : T \rightarrow U$ be mappings.
 \begin{enumerate}[(a)]
 \item If $g, f$ are injective, show that $g \circ f$ is injective. 
 \item If $f, g$ are surjective, show that $g \circ f$ is surjective.
 \end{enumerate}
 % Ex 6 Solution
 \paragraph{Solution:}{
-}
+%	START part (a)
+Part (a)\\
+\begin{align*}
+\text{Let } x_1, x_2 \in S\,,\: y_1 &= f(x_1)\,,\:  y_2 = f(x_2) \in T\,,\\
+                                z_1 &= g(y_1)\,,\:  z_2 = g(y_2) \in U\,.\\
+(x_1 \neq x_2)  &\implies  (y_1 \neq y_2)\qquad \text{ (due to } f \text{ being injective.)}\\   
+(y_1 \neq y_2)  &\implies  (z_1 \neq z_2)\qquad \text{ (due to } g \text{ being injective.)}\\
+\text{Therefore}\\
+(x_1 \neq x_2)  &\implies  (z_1 \neq z_2)\:\: \text{hence }\:\: g \circ f \text{ is injective.)} \qed   
+\end{align*}
 
+%   START part (b) 
+Part (b)\\
+\begin{align*}
+g \text{ surjective } &\implies \qquad \forall z \in U \: \exists y \in T \text{ such that } g(y) = z\,\\
+f \text{ surjective } &\implies \qquad \forall y \in T \: \exists x \in S \text{ such that } f(x) = y\,\\
+\text{Therefore}\\
+f,g \text{ \tbi{both} surjective } &\implies \forall z \in U \: \exists x \in S \text{ such that } (g \circ f)(x) = z\,\\
+\text{hence }\:\: g \circ f \text{ is surjective.)} \qed 
+\end{align*}
+
+\newpage
 \subsubsection{Ex 0.2 (7)}\label{sec:Ex_0.2.7}
 % Ex 7 Statement
 Let $S, T$ be sets, and $f : S \rightarrow T$ a mapping.
@@ -160,6 +180,11 @@ Show that $f$ is bijective if and only if $f$ has an inverse mapping.
 
 % Ex 7 Solution
 \paragraph{Solution:}{
+For an inverse mapping $f^{-1} : T : \rightarrow S$ to exist 
+\begin{itemize}
+\item Any element $y \in T$ must be the image of some $x \in S$ (surjective);
+\item No  element $y \in T$ can be the image of more than a single element $x \in S$ (injective).\qed
+\end{itemize} 
 }
 
 
