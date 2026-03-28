@@ -180,26 +180,101 @@ Show that $f$ is bijective if and only if $f$ has an inverse mapping.
 
 % Ex 7 Solution
 \paragraph{Solution:}{
-For an inverse mapping $f^{-1} : T : \rightarrow S$ to exist 
+For an inverse mapping $f^{-1} : T \rightarrow S$ to exist 
 \begin{itemize}
-\item Any element $y \in T$ must be the image of some $x \in S$ (surjective);
-\item No  element $y \in T$ can be the image of more than a single element $x \in S$ (injective).\qed
-\end{itemize} 
+\item Any element $y \in T$ must be the image of some $x \in S$ ($f$ \tit{surjective});    
+\item No  element $y \in T$ can be the image of more than a single element $x \in S$ ($f$ \tit{injective}).
+\end{itemize}
+
+It is thus a \tbi{necessary} condition for $f^{-1}$ to exist that $f$ be a bijective function.
+That is also a \tbi{sufficient} condition, because the inverse image of any element $y \in T$ is 
+just the \tit{unique} element $x \in S$ such that $f(x) = y\,.\qed$
 }
-
-
-
-
-
-
-\newpage		% Forcing a page break
-%
-
 
 
 %\newpage		% Forcing a page break
 \section{Natural Numbers and Induction}\label{sec:0.3}	
 \subsection*{Exercises}\label{sec:0.3_Exercises}
+
+\subsubsection{Ex 0.3 (1)}\label{sec:Ex_0.3.1}
+% Ex 1 statement
+Prove the following statements for all positive integers:
+\begin{enumerate}[(a)]
+\item $1 + 3 + 5 + \cdots + (2n - 1) = n^2$
+\item $1^2 + 2^2 + \cdots + n^2 = n (n+1)(2n + 1)/6$
+\item $1^3 + 2^3 + \cdots + n^3 = [n (n+1)/2]^2$
+\end{enumerate}
+
+%
+% Ex 1 solution
+%
+\paragraph{Solution:}{
+\begin{enumerate}[(a)]
+\item $\sum_{i=1}^{n} (2n-1) = 2 \sum_{i=1}^{n} i - \sum_{i=1}^{n} 1 = 2 \frac{n(n+1)}{2} - n = n(n+1) - n = n^2\,.$ 
+\item The statement is true for $n = 1\,: 1^2 = 1 \cdot 2 \cdot 3/6 = 6/6$. By induction, it is enough to prove that \tbi{if} the sum of the squares $i^2$ of the first $n$ integers equals $n (n+1)(2n + 1)/6$ \tbi{then} by adding $(n+1)^2$ to this sum one obtains $m (m+1)(2m + 1)/6$, with $m=n+1$. Indeed both expressions reduce to $2 n^3 + 9 n^2 + 13 n + 6$, hence the identity is proved.
+\item The statement is true for $n = 1\,: 1^3 = [1\cdot(1+1)/2)]^2 = 1$. By induction, it is enough to prove that \tbi{if} the sum of the cubes $i^3$ of the first $n$ integers equals $[n (n+1)/2]^2$ \tbi{then} by adding $(n+1)^3$ to this sum one obtains $[m (m+1)/2]^2$, with $m=n+1$. Indeed both expressions reduce to $n^4+ 6 n^3 + 13 n^2 + 12 n + 4$, hence the identity is proved.
+\end{enumerate}
+}
+
+\subsubsection{Ex 0.3 (2)}\label{sec:Ex_0.3.2}
+% Ex 2 statement
+Prove that for all numbers $x \neq 1$,
+$$ (1 + x)(1 + x^2)(1 + x^4)\cdots(1 + x^{2n}) = \frac{1 - x^{2n + 1}}{1 - x}
+$$
+
+%
+% Ex 2 solution
+%
+\paragraph{Solution:}{
+}
+
+\subsubsection{Ex 0.3 (3)}\label{sec:Ex_0.3.3}
+% Ex 3 statement
+Let $f: \N \rightarrow \N$ be a mapping such that $f(xy) = f(x) + f(y)$ for all $x, y$. 
+Show that $f(a^n) = n f(a)$ for all $n \in \N\,.$ 
+%
+% Ex 3 solution
+%
+\paragraph{Solution:}{
+}
+
+
+\subsubsection{Ex 0.3 (4)}\label{sec:Ex_0.3.4}
+% Ex 4 statement
+$$\text{Let } \binom{n}{k} \text{ denote the binomial coefficient, } \binom{n}{k} = \frac{n!}{k!(n-k)!}\,,$$
+%$$\binom{n}{k} = \frac{n!}{k!(n-k)!}\,,$$
+where $n, k$ are integers $\geq 0$, $0 \leq k \leq n$, and $0!$ is defined to be $1$.
+Also $n!$ is defined to be the product $1 \cdot 2 \cdot 3 \cdots n$. Prove the following  assertions
+
+$$ (a)\: \binom{n}{k} = \binom{n}{n-k}\qquad (b)\: \binom{n}{k-1} + \binom{n}{k} = \binom{n+1}{k}\: \text{  ( for }k > 0\,\text{)}$$
+
+%
+% Ex 4 solution
+%
+\paragraph{Solution:}{
+}
+
+
+\subsubsection{Ex 0.3 (5)}\label{sec:Ex_0.3.5}
+% Ex 5 statement
+
+%
+% Ex 5 solution
+%
+\paragraph{Solution:}{
+}
+
+
+\subsubsection{Ex 0.3 (6)}\label{sec:Ex_0.3.6}
+% Ex 6 statement
+
+%
+% Ex 6 solution
+%
+\paragraph{Solution:}{
+}
+
+
 %\newpage		% Forcing a page break
 \section{Denumerable Sets}\label{sec:0.4}	
 \subsection*{Exercises}\label{sec:0.4_Exercises}
