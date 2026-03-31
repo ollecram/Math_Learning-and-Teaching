@@ -220,13 +220,29 @@ Prove the following statements for all positive integers:
 \subsubsection{Ex 0.3 (2)}\label{sec:Ex_0.3.2}
 % Ex 2 statement
 Prove that for all numbers $x \neq 1$,
-$$ (1 + x)(1 + x^2)(1 + x^4)\cdots(1 + x^{2n}) = \frac{1 - x^{2n + 1}}{1 - x}
-$$
+$$ (1 + x)(1 + x^2)(1 + x^4)\cdots(1 + x^{2^{n}}) = \frac{1 - x^{2^{n + 1}}}{1 - x}$$
 
 %
 % Ex 2 solution
 %
 \paragraph{Solution:}{
+We are facing a product whose first term can be written as $1 + x^{2^{0}} = 1 + x^{1} = (1+x)\,$ 
+while the last term is $1 + x^{2^{n}}$.\\ We must prove that
+
+$$P(n, x) \equiv \prod_{k=0}^{n} (1 + x^{2^{2k}}) = F(n, x) \equiv \frac{1 - x^{2^{n + 1}}}{1 - x}\,.$$
+
+We start verifying that $P(0, x) \equiv F(0, x)$
+
+$$   P(0, x) = (1 + x^{2^{2 \cdot 0}}) = (1 + x) \equiv F(0, x) = \frac{1 - x^{2}}{1 - x} = \frac{(1 + x)(1 - x)}{1 - x}\,,$$
+
+then we continue with a proof by induction by showing that $$P(n, x) \equiv F(n, x) \implies P(n+1, x) \equiv F(n+1, x)\,:$$ 
+\begin{align*}
+P(n+1, x) &= P(n, x) \cdot (1 + x^{2^{(n+1)}})\\
+          &= \frac{(1 - x^{2^{(n + 1)}})}{1 - x} \cdot (1 + x^{2^{(n+1)}})\\
+          &= \frac{  (1 - x^{2^{(n + 1)}})  \cdot (1 + x^{2^{(n+1)}}) }{1 - x} \\
+          &= \frac{  \left(1 - {\left( x^{2^{(n + 1)}} \right)}^2 \right)  }{1 - x}\\
+          &= \frac{  \left(1 - x^{2^{(n + 2)}} \right)  }{1 - x} \equiv F(n+1, x)\,\qed.
+\end{align*}
 }
 
 \subsubsection{Ex 0.3 (3)}\label{sec:Ex_0.3.3}
@@ -246,7 +262,6 @@ $$\text{Let } \binom{n}{k} \text{ denote the binomial coefficient, } \binom{n}{k
 %$$\binom{n}{k} = \frac{n!}{k!(n-k)!}\,,$$
 where $n, k$ are integers $\geq 0$, $0 \leq k \leq n$, and $0!$ is defined to be $1$.
 Also $n!$ is defined to be the product $1 \cdot 2 \cdot 3 \cdots n$. Prove the following  assertions
-
 $$ (a)\: \binom{n}{k} = \binom{n}{n-k}\qquad (b)\: \binom{n}{k-1} + \binom{n}{k} = \binom{n+1}{k}\: \text{  ( for }k > 0\,\text{)}$$
 
 %
