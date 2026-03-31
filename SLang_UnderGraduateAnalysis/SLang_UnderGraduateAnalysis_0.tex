@@ -229,11 +229,11 @@ $$ (1 + x)(1 + x^2)(1 + x^4)\cdots(1 + x^{2^{n}}) = \frac{1 - x^{2^{n + 1}}}{1 -
 We are facing a product whose first term can be written as $1 + x^{2^{0}} = 1 + x^{1} = (1+x)\,$ 
 while the last term is $1 + x^{2^{n}}$.\\ We must prove that
 
-$$P(n, x) \equiv \prod_{k=0}^{n} (1 + x^{2^{2k}}) = F(n, x) \equiv \frac{1 - x^{2^{n + 1}}}{1 - x}\,.$$
+$$P(n, x) \equiv \prod_{k=0}^{n} (1 + x^{2^{k}}) = F(n, x) \equiv \frac{1 - x^{2^{n + 1}}}{1 - x}\,.$$
 
 We start verifying that $P(0, x) \equiv F(0, x)$
 
-$$   P(0, x) = (1 + x^{2^{2 \cdot 0}}) = (1 + x) \equiv F(0, x) = \frac{1 - x^{2}}{1 - x} = \frac{(1 + x)(1 - x)}{1 - x}\,,$$
+$$   P(0, x) = (1 + x^{2^{0}}) = (1 + x) \equiv F(0, x) = \frac{1 - x^{2}}{1 - x} = \frac{(1 + x)(1 - x)}{1 - x}\,,$$
 
 then we continue with a proof by induction by showing that $$P(n, x) \equiv F(n, x) \implies P(n+1, x) \equiv F(n+1, x)\,:$$ 
 \begin{align*}
