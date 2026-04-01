@@ -294,21 +294,35 @@ $$ (a)\: \binom{n}{k} = \binom{n}{n-k}\qquad (b)\: \binom{n}{k-1} + \binom{n}{k}
 
 \subsubsection{Ex 0.3 (5)}\label{sec:Ex_0.3.5}
 % Ex 5 statement
-
+\tit{Prove by induction that}
+$$ (x + y)^n = \sum_{k=0}^n \binom{n}{k} x^k y ^{n-k}\,.$$
 %
 % Ex 5 solution
 %
 \paragraph{Solution:}{
-}
+The formula is true for $n = 1$, since by definition $0! = 1$, and $\binom{n}{0} = \binom{n}{n} = 1$. 
+Assuming the formula to be true for $n \geq 1$, we must show that it is true for $n+1$ as well: 
+\begin{align*}
+(x + y)^{n+1} &= (x + y) \left[ \sum_{k=0}^n \binom{n}{k} x^k y ^{n-k}   \right]\\
+              &= \sum_{k=0}^n \binom{n}{k} x^{k+1} y^{n-k} + \sum_{k=0}^n \binom{n}{k} x^k y ^{n+1-k}\\
+              &= \sum_{k=1}^{n+1} \binom{n}{k-1} x^{k} y^{n+1-k} + \sum_{k=0}^n \binom{n}{k} x^k y ^{n+1-k}\\ 
+              &= \sum_{k=1}^{n} \left[ \binom{n}{k-1} +  \binom{n}{k} \right] x^{k} y^{n+1-k} + \binom{n}{n} x^{n+1} + y^{n+1}\\
+              &= \sum_{k=1}^{n} \binom{n+1}{k}  x^{k} y^{n+1-k}  + x^{n+1} + y^{n+1}\\
+              &= \sum_{k=0}^{n+1} \binom{n+1}{k}  x^{k} y^{n+1-k} \qed
+\end{align*}
 
+\tbi{Note: }The sum of binomial coeficients within square parentheses \tbi{on the 4th row} is \tbi{replaced in the 5th row} according to the result of Exercise. 0.3.4 part (b).  
 
 \subsubsection{Ex 0.3 (6)}\label{sec:Ex_0.3.6}
 % Ex 6 statement
-
+Prove that 
+$$\prod_{k=1}^{n-1} \left(1 + \frac{1}{k} \right)^k  = \left(1 + \frac{1}{1} \right)^1 \left(1 + \frac{1}{2} \right)^2 \cdots \left(1 + \frac{1}{n - 1} \right)^{(n-1)} = \frac{n^{n-1}}{(n-1)!}\,.$$
+\tit{Find and prove a similar formula for the product of terms $(1 + 1/k)^{k+1}$ taken for $k = 1,\ldots, n-1\,.$}
 %
 % Ex 6 solution
 %
 \paragraph{Solution:}{
+
 }
 
 
