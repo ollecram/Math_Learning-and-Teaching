@@ -231,7 +231,7 @@ while the last term is $1 + x^{2^{n}}$.\\ We must prove that
 
 $$P(n, x) \equiv \prod_{k=0}^{n} (1 + x^{2^{k}}) = F(n, x) \equiv \frac{1 - x^{2^{n + 1}}}{1 - x}\,.$$
 
-We start verifying that $P(0, x) \equiv F(0, x)$
+We start verifying that $P(0, x) \equiv F(0, x)\,$:
 
 $$   P(0, x) = (1 + x^{2^{0}}) = (1 + x) \equiv F(0, x) = \frac{1 - x^{2}}{1 - x} = \frac{(1 + x)(1 - x)}{1 - x}\,,$$
 
@@ -253,6 +253,18 @@ Show that $f(a^n) = n f(a)$ for all $n \in \N\,.$
 % Ex 3 solution
 %
 \paragraph{Solution:}{
+We must prove that 
+$$P(n, a) \equiv f(a^n) = n \cdot f(a) \equiv F(n, a)\,.$$
+
+We start verifying that $P(1, a) \equiv F(1, a)\,$:
+$$ P(1, a) = f(a^1) = 1 \cdot f(a)\,,$$
+then we continue with a proof by induction by showing that $$P(n, a) \equiv F(n, a) \implies P(n+1, a) \equiv F(n+1, a)\,:$$  
+\begin{align*}
+P(n+1, a) &= f(a^{n+1}) = f(a \cdot a^n) \\
+          &= f(a) + f(a^n) = f(a) + n f(a)\\
+          &= (n+1) f(a) \equiv F(n+1, a)\, \qed
+\end{align*}
+
 }
 
 
