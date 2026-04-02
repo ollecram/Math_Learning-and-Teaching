@@ -321,8 +321,22 @@ $$\prod_{k=1}^{n-1} \left(1 + \frac{1}{k} \right)^k  = \left(1 + \frac{1}{1} \ri
 %
 % Ex 6 solution
 %
-\paragraph{Solution:}{
+\paragraph{Solution (Part I) :}{
+Given $$P(n) \equiv \prod_{k=1}^{n-1} \left(1 + \frac{1}{k} \right)^{k} = \frac{n^{n-1}}{(n - 1)!} \equiv F(n)\,,$$
+one can easily verify that $P(2) = 2 = F(2)\,, P(3) = 9/2 = F(3)\,, \ldots$.\\Proceeding by induction amounts to prove that 
+$$ P(n+1) \equiv P(n) \cdot \left(1 + \frac{1}{n} \right)^{n} = 
+\frac{n^{n-1}}{(n - 1)!} \cdot \left(1 + \frac{1}{n} \right)^{n} = \frac{(n+1)^n}{n!} \equiv F(n+1)\,,$$ 
+and this is easily verified:
+\begin{align*}
+\frac{n^{n-1}}{(n - 1)!} \cdot \left(1 + \frac{1}{n} \right)^{n} &= \frac{n^{n-1}}{(n - 1)!} \cdot {\left(\frac{n + 1}{n}\right)}^n\\
+                                                                 &= \frac{n^{n-1}}{(n - 1)!} \cdot  \frac{(n + 1)^n}{n^n} \\
+                                                                 &= \frac{n^{0}}{(n - 1)!} \cdot  \frac{(n + 1)^n}{n^1} \\
+                                                                 &= \frac{(n + 1)^n}{n (n - 1)!} \\ 
+                                                                 &= \frac{(n+1)^n}{n!} \qed 
+\end{align*}
+}
 
+\paragraph{Solution (Part II) :}{
 }
 
 
