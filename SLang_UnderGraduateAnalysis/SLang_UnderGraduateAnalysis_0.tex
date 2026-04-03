@@ -337,6 +337,20 @@ and this is easily verified:
 }
 
 \paragraph{Solution (Part II) :}{
+We must prove that
+$$P(n) \equiv \prod_{k=1}^{n-1} \left(1 + \frac{1}{k} \right)^{k+1} = \left(1 + \frac{1}{1} \right)^2 \cdots \left(1 + \frac{1}{n - 1} \right)^{n} = \frac{n^n}{(n-1)!}\, \equiv F(n)\,.$$
+We verify that 
+$$P(2) \equiv {\left( 1 + \frac{1}{1}  \right)}^2 = 4 = \frac{2^2}{(2 - 1)!} \equiv F(2)\,.$$   
+Proceeding by induction amounts to prove that 
+$$ P(n+1) \equiv P(n) \cdot \left(1 + \frac{1}{n} \right)^{n+1} = 
+\frac{n^n}{(n - 1)!} \cdot \left(1 + \frac{1}{n} \right)^{n+1} = \frac{(n+1)^{n+1}}{n!} \equiv F(n+1)\,,$$ 
+and this is indeed the case:
+
+\begin{align*}
+\frac{n^n}{(n - 1)!} \cdot \left(1 + \frac{1}{n} \right)^{n+1} &= \frac{n^n}{(n - 1)!} \cdot \frac{1}{n^{n+1}} \cdot {(n + 1)}^{n+1} \\
+                                                               &= \frac{(n+1)^{n+1}}{n \cdot (n-1)!} \equiv{F(n+1)\,.} \qed
+\end{align*}
+
 }
 
 
