@@ -350,14 +350,86 @@ and this is indeed the case:
 \frac{n^n}{(n - 1)!} \cdot \left(1 + \frac{1}{n} \right)^{n+1} &= \frac{n^n}{(n - 1)!} \cdot \frac{1}{n^{n+1}} \cdot {(n + 1)}^{n+1} \\
                                                                &= \frac{(n+1)^{n+1}}{n \cdot (n-1)!} \equiv{F(n+1)\,.} \qed
 \end{align*}
-
 }
 
 
 %\newpage		% Forcing a page break
 \section{Denumerable Sets}\label{sec:0.4}	
 \subsection*{Exercises}\label{sec:0.4_Exercises}
+\subsubsection{Ex 0.4 (1)}\label{sec:Ex_0.4.1}
+% Ex 1 statement
+Let $F$ be a finite non-empty set. Show that there is a surjective mapping of $\Z^+$ onto $F$.
+%
+% Ex 1 solution
+%
+\paragraph{Solution:}{
+  
+Let $m$ be the cardinality (number of elements) of the set $F$ \tit{which we} \tbi{denote as} $x_0,\ldots, x_{m-1}$. 
+Any mapping $f$ of $\Z^+$ onto $F$ defines, \tbi{for each} $z \in \Z$, a corresponding $f(z) \in F$. Being $F$ \tit{finite}, one or more elements of $F$ must be the image of an \tit{infinite} number of elements of $\Z$. The requirement of $f()$ being \tit{surjective} implies that any element of $F$ must be the image of \tit{at least one element} from $\Z$. We offer the example of two maps satisfying the requirements:
+\begin{enumerate}[i)]
+\item $f_1$ maps $\Z^+$ elements $\{1, \ldots, m-1\}$ to some choice of $m-1$ elements in $F$, while all elements $z \geq m \in \Z^+$ are mapped to the element $x_0 \in F\,;$
+\item We define a \tbi{partition} of the set $\Z^+$ by $m$ \tit{non-overlapping} subsets $\Z_0, \Z_1, \ldots, \Z_{m-1}$ so that all elements of subset $\Z_i$ map to the element $x_i \in F$. An obvious criterion to determine the partition $\{\Z_1, \ldots, \Z_m\}$ is to define classes \tit{modulo }$m$:
+$$ \Z_i = \{ z \in \Z \text{ such that } i \text{ is the remainder of } z/m\,.\} $$     
+\end{enumerate}
+
+ 
+
+}
+
+\subsubsection{Ex 0.4 (2)}\label{sec:Ex_0.4.2}
+% Ex 2 statement
+How many maps are there which are defined on the set of numbers $\{1, 2, 3  \}$ and whose values
+are in the set of integers $n$ with $1 \leq n \leq 10$ ? 
+%
+% Ex 2 solution
+%
+\paragraph{Solution:}{
+}
+
+\subsubsection{Ex 0.4 (3)}\label{sec:Ex_0.4.3}
+% Ex 3 statement
+Let $E$ be a set with $m$ elements and $F$ a set with $n$ elements. How many maps are there defined on $E$ with values in $F$?
+[\tit{Hint}: Suppose first that $E$ has one element. Next use induction on $m$, keeping $n$ fixed.]
+%
+% Ex 3 solution
+%
+\paragraph{Solution:}{
+}
+
+\subsubsection{Ex 0.4 (4)}\label{sec:Ex_0.4.4}
+% Ex 4 statement
+If $S, T, S', T'$ are sets, and there is a bijection between $S$ and $S'$, $T$ and $T'$, describe a natural bijection between 
+$S \times T$ and $S' \times T'$. Such a bijection has been used implicitly in some proofs. 
+%
+% Ex 4 solution
+%
+\paragraph{Solution:}{
+
+}
+
+
 %\newpage		% Forcing a page break
 \section{Equivalence Relations}\label{sec:0.5}	
 \subsection*{Exercises}\label{sec:0.5_Exercises}
+\subsubsection{Ex 0.5 (1)}\label{sec:Ex_0.5.1}
+% Ex 1 statement
+Let $T$ be a subset of $\Z$ having the property that if $m, n \in T$, then $m + n$ and $-n$ are in $T$.
+For $x, y \in \Z$ define $x \equiv y$ if $x - y \in T$. Show that this is an equivalence relation.
+%
+% Ex 1 solution
+%
+\paragraph{Solution:}{
+
+}
+
+\subsubsection{Ex 0.5 (2)}\label{sec:Ex_0.5.2}
+% Ex 2 statement
+Let $S = \Z$ be the set of integers. Define the relation $x \equiv y$ for $x, y \in \Z$ to mean
+that $x - y$ is divisible by $3$. Show that this is an equivalence relation. 
+%
+% Ex 2 solution
+%
+\paragraph{Solution:}{
+}
+
 %\newpage		% Forcing a page break
