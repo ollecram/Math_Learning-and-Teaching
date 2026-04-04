@@ -365,11 +365,11 @@ Let $F$ be a finite non-empty set. Show that there is a surjective mapping of $\
 \paragraph{Solution:}{
   
 Let $m$ be the cardinality (number of elements) of the set $F$ \tit{which we} \tbi{denote as} $x_0,\ldots, x_{m-1}$. 
-Any mapping $f$ of $\Z^+$ onto $F$ defines, \tbi{for each} $z \in \Z$, a corresponding $f(z) \in F$. Being $F$ \tit{finite}, one or more elements of $F$ must be the image of an \tit{infinite} number of elements of $\Z$. The requirement of $f()$ being \tit{surjective} implies that any element of $F$ must be the image of \tit{at least one element} from $\Z$. We offer the example of two maps satisfying the requirements:
+Any mapping $f$ of $\Z^+$ onto $F$ defines, \tbi{for each} $z \in \Z^+$, a corresponding $f(z) \in F$. Being $F$ \tit{finite}, one or more elements of $F$ must be the image of an \tit{infinite} number of elements of $\Z^+$. The requirement of $f()$ being \tit{surjective} implies that any element of $F$ must be the image of \tit{at least one element} from $\Z^+$. We offer the example of two maps satisfying the requirements:
 \begin{enumerate}[i)]
 \item $f_1$ maps $\Z^+$ elements $\{1, \ldots, m-1\}$ to some choice of $m-1$ elements in $F$, while all elements $z \geq m \in \Z^+$ are mapped to the element $x_0 \in F\,;$
 \item We define a \tbi{partition} of the set $\Z^+$ by $m$ \tit{non-overlapping} subsets $\Z_0, \Z_1, \ldots, \Z_{m-1}$ so that all elements of subset $\Z_i$ map to the element $x_i \in F$. An obvious criterion to determine the partition $\{\Z_1, \ldots, \Z_m\}$ is to define classes \tit{modulo }$m$:
-$$ \Z_i = \{ z \in \Z \text{ such that } i \text{ is the remainder of } z/m\,.\} $$     
+$$ \Z_i = \{ z \in \Z^+ \text{ such that } i \text{ is the remainder of } z/m\,.\} $$     
 \end{enumerate}
 
  
@@ -384,6 +384,8 @@ are in the set of integers $n$ with $1 \leq n \leq 10$ ?
 % Ex 2 solution
 %
 \paragraph{Solution:}{
+A function can map each one of the $3$ elements in the \tbi{domain} to any single element out of the $10$ which are in the \tbi{codomain}.
+Moreover, the choice of which element $y$ of the codomain is the image of some domain element $x$ is totally independent from the mapping of any other domain element. This number is thus equivalent to the number of possible outcomes of extracting for $3$ times (with re-insertion) from a bag containing $10$ distinct objects: $$10^3\,.$$
 }
 
 \subsubsection{Ex 0.4 (3)}\label{sec:Ex_0.4.3}
@@ -394,6 +396,13 @@ Let $E$ be a set with $m$ elements and $F$ a set with $n$ elements. How many map
 % Ex 3 solution
 %
 \paragraph{Solution:}{
+Let $F(m, n)$ be the number of distinct functions mapping a finite set of $m$ elements onto a finite set of $n$ elements.
+If $E$ has $1$ element $x$ there are $n$ distinct functions $f_i$, each mapping $x$ to a distinct element $y_i \in F$, hence  $F(1, n) = n$.
+We want to prove  by induction that $F(m, n) = n^m$. We have already proved $F(1, n) = n^1$, hence we only need to prove that adding one element to $E$ multiplies the number of distinct mappings by $n$. Indeed, if $E$ has $m$ elements, we have again $n$ distinct choices for the element of $F$ onto which this additional element of $E$ can be possibly mapped. Hence 
+$$F(m, n) = n F(m-1, n) = n^{m-1} \cdot n = n^m\,.\qed$$ 
+
+
+
 }
 
 \subsubsection{Ex 0.4 (4)}\label{sec:Ex_0.4.4}
