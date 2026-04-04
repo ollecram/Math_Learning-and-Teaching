@@ -398,11 +398,8 @@ Let $E$ be a set with $m$ elements and $F$ a set with $n$ elements. How many map
 \paragraph{Solution:}{
 Let $F(m, n)$ be the number of distinct functions mapping a finite set of $m$ elements onto a finite set of $n$ elements.
 If $E$ has $1$ element $x$ there are $n$ distinct functions $f_i$, each mapping $x$ to a distinct element $y_i \in F$, hence  $F(1, n) = n$.
-We want to prove  by induction that $F(m, n) = n^m$. We have already proved $F(1, n) = n^1$, hence we only need to prove that adding one element to $E$ multiplies the number of distinct mappings by $n$. Indeed, if $E$ has $m$ elements, we have again $n$ distinct choices for the element of $F$ onto which this additional element of $E$ can be possibly mapped. Hence 
+We want to prove  by induction that $F(m, n) = n^m$. We have already proved $F(1, n) = n^1$, hence we only need to prove that adding one element to $E$ multiplies the number of distinct mappings by $n$. Indeed, if $E$ has $m$ elements, we have again $n$ distinct choices for the element of $F$ onto which this additional element of $E$ can be mapped. Hence 
 $$F(m, n) = n F(m-1, n) = n^{m-1} \cdot n = n^m\,.\qed$$ 
-
-
-
 }
 
 \subsubsection{Ex 0.4 (4)}\label{sec:Ex_0.4.4}
@@ -413,7 +410,9 @@ $S \times T$ and $S' \times T'$. Such a bijection has been used implicitly in so
 % Ex 4 solution
 %
 \paragraph{Solution:}{
-
+Let $f : S \rightarrow S'\:$ and $g : T \rightarrow T'\:$ the two existing bijective functions. 
+A bijection suggesting itself as \quotes{natural} between the sets $S \times T$ (domain) and $S' \times T'$ (codomain) is the 
+function $h: S \times T \rightarrow S' \times T'$ which maps $(s, t)$ to $(s', t')$.
 }
 
 
