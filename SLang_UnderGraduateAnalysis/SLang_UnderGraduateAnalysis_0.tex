@@ -427,7 +427,15 @@ For $x, y \in \Z$ define $x \equiv y$ if $x - y \in T$. Show that this is an equ
 % Ex 1 solution
 %
 \paragraph{Solution:}{
-
+It $T$ is empty there is nothing to prove.\\ 
+$0 \in T$ because, if $z \in T$ then $-z \in T$, hence $(z + (-z)) = z - z = 0 \in T$.\\
+\begin{itemize}
+\item $(x \cong x)$ (\tit{reflexivity} of $\cong$) holds for each $x \in \Z$,\\ because $(x - x) = x + (-x) = 0$.
+\item $(x \cong y) \implies (y \cong x)$ (\tit{symmetry} of $\cong$) holds for any $x, y \in \Z$, because
+$(x \cong y) \iff (y - x) \in T  \iff (x - y) \in T \iff (y \cong x)\,.$
+\item $[(x \cong y) \land (y \cong z)] \implies (x \cong z)$ (\tit{transitivity} of $\cong$) holds, because \\
+$[(x - y) \in T] \land [(y - z) \in T] \implies (x - z) = [(x - y) + (y - z)] \in T\,.$   
+\end{itemize}
 }
 
 \subsubsection{Ex 0.5 (2)}\label{sec:Ex_0.5.2}
@@ -438,6 +446,14 @@ that $x - y$ is divisible by $3$. Show that this is an equivalence relation.
 % Ex 2 solution
 %
 \paragraph{Solution:}{
+$x - y$ is divisible by $3$ means: $\exists m \in \Z ; (x-y) = 3 \times m$.  
+
+\begin{itemize}
+\item  $x \cong x$ (\tit{reflexivity} of $\cong$):  $(x - x) = 3 \times 0\,;$ 
+\item  $x \cong y$ (\tit{symmetry} of $\cong$):  $(x - y) = 3 \times m \quad \implies \quad (y - x) = 3 \times (-m)\,;$ 
+\item $[(x \cong y) \land (y \cong z)]$	(\tit{transitivity}  of $\cong$):  $(x - y) = 3 \times m$, and $(y - z) = 3 \times n$, hence 
+$(x - z) = (x - y) + (y - z) = (x - z) = 3 \times (n + m)\,.$  
+\end{itemize}
 }
 
 %\newpage		% Forcing a page break
